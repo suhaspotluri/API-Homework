@@ -54,7 +54,7 @@
     	// You will need to update this query with the city, weather format (Celsius or Fahrenheit) and your OpenWeatherMap ID
     	 
     	// Right now I have it set to Chicago.  The default should be Ann Abor/Fahreheit.
-		let query = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units="+unit+"&APPID=" +YourWeatherAppID;
+		let query = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&units="+unit+"&APPID=" +YourWeatherAppID;
         console.log("Query is :" + query)
 
         $.getJSON(query,function(json){
@@ -65,7 +65,7 @@
 			document.getElementById("temp").textContent=obj.main.temp;
 			document.getElementById("high").textContent=obj.main.temp_max;
 			document.getElementById("low").textContent=obj.main.temp_min;
-			document.getElementById("tempImg").setAttribute("src","http://openweathermap.org/img/wn/"+obj.weather[0].icon+"@2x.png");
+			document.getElementById("tempImg").setAttribute("src","https://openweathermap.org/img/wn/"+obj.weather[0].icon+"@2x.png");
     })
     }
     </script>
